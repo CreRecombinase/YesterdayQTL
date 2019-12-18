@@ -41,7 +41,7 @@ ENDIF(NOT CMAKE_BUILD_TYPE)
 
 
 
-
+find_package(ZLIB REQUIRED)
 find_package(HTSlib REQUIRED htslib)
 find_package(Boost COMPONENTS iostreams program_options REQUIRED)
 message("boost lib: ${Boost_LIBRARIES}, inc:${Boost_INCLUDE_DIR}")
@@ -88,6 +88,7 @@ target_link_libraries(
 target_link_libraries(fastqtl PRIVATE Eigen3::Eigen)
 set_target_properties(BZip2::BZip2 PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${BZIP2_INCLUDE_DIR}")
 target_link_libraries(fastqtl PRIVATE BZip2::BZip2)
+target_link_libraries(fastqtl PRIVATE ZLIB::ZLIB)
 #target_link_libraries(fastqtl PRIVATE rmath)
 target_link_libraries(fastqtl PRIVATE GSL::gsl)
 target_link_libraries(fastqtl PRIVATE GSL::gsl)
