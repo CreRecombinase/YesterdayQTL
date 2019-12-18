@@ -113,10 +113,7 @@ target_link_libraries(fastqtl PRIVATE Boost::program_options)
 
 install(TARGETS fastqtl
         EXPORT fastqtlTargets
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
-        INCLUDES DESTINATION include
         )
 # target_include_directories(
 #   vcf2h5
