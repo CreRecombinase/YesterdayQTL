@@ -7,7 +7,9 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 
+
 find_package (GSL REQUIRED)
+find_package (Eigen3 3.3 REQUIRED NO_MODULE)
 find_package(BZip2 REQUIRED)
 
 
@@ -83,7 +85,7 @@ add_executable(fastqtl src/analysisMapping.cpp
 target_link_libraries(
   fastqtl
   PRIVATE rmath)
-
+target_link_libraries(fastqtl PRIVATE Eigen3::Eigen)
 #target_link_libraries(fastqtl PRIVATE rmath)
 target_link_libraries(fastqtl PRIVATE GSL::gsl)
 #find_package(rmath REQUIRED)
