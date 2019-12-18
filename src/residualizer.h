@@ -17,8 +17,8 @@
 #ifndef _RESIDUALIZER_H
 #define _RESIDUALIZER_H
 
-#include <eigen3/Eigen/Dense>
-#include <eigen3/Eigen/LU>
+#include "eigen3/Eigen/Dense"
+#include "eigen3/Eigen/LU"
 #include "utils.h"
 
 using namespace Eigen;
