@@ -7,9 +7,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 
-set(USE_EIGEN TRUE CACHE INTERNAL "")
 find_package (GSL REQUIRED)
-find_package (Eigen3 3.3 REQUIRED NO_MODULE)
 find_package(BZip2 REQUIRED)
 
 
