@@ -110,6 +110,14 @@ target_include_directories(fastqtl PRIVATE ${Boost_INCLUDE_DIRS})
 target_link_libraries(fastqtl PRIVATE Boost::iostreams)
 target_link_libraries(fastqtl PRIVATE Boost::program_options)
 
+
+install(TARGETS fastqtl
+        EXPORT fastqtlTargets
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+        INCLUDES DESTINATION include
+        )
 # target_include_directories(
 #   vcf2h5
 #   PRIVATE $<TARGET_PROPERTY:range-v3,INTERFACE_INCLUDE_DIRECTORIES>)
