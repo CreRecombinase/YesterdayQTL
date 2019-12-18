@@ -86,7 +86,10 @@ target_link_libraries(
   fastqtl
   PRIVATE rmath)
 target_link_libraries(fastqtl PRIVATE Eigen3::Eigen)
+set_target_properties(BZip2::BZip2 PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${BZIP2_INCLUDE_DIR}")
+target_link_libraries(fastqtl PRIVATE BZip2::BZip2)
 #target_link_libraries(fastqtl PRIVATE rmath)
+target_link_libraries(fastqtl PRIVATE GSL::gsl)
 target_link_libraries(fastqtl PRIVATE GSL::gsl)
 #find_package(rmath REQUIRED)
 
